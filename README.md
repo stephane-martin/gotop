@@ -5,7 +5,7 @@
 </a>
 <br><br>
 
-Another terminal based graphical activity monitor, inspired by [gtop](https://github.com/aksakalli/gtop) and [vtop](https://github.com/MrRio/vtop), this time written in [Go](https://golang.org/)!
+Another terminal based graphical activity monitor, inspired by [gtop](https://github.com/aksakalli/gtop) and [vtop](https://github.com/MrRio/vtop), originally written in Go, now in Rust!
 
 <img src="./assets/demos/demo.gif" />
 <img src="./assets/screenshots/minimal.png" width="96%" />
@@ -18,22 +18,30 @@ Working and tested on Linux, FreeBSD and macOS. Windows support is planned. Open
 
 ### Source
 
+Latest release:
+
 ```bash
-go get github.com/cjbassi/gotop
+cargo install gotop
+```
+
+Latest commit:
+
+```bash
+cargo install --git https://github.com/cjbassi/gotop
 ```
 
 ### Prebuilt binaries
 
-**Note**: Doesn't require Go.
+**Note**: Doesn't require Cargo/Rust.
 
-Clone the repo and then run [scripts/download.sh](./scripts/download.sh) to download the correct binary for your system from the [releases tab](https://github.com/cjbassi/gotop/releases):
+Run the following to download the correct binary for your system from the releases tab into `$CARGO_HOME/bin`, courtesy of [japaric/trust](https://github.com/japaric/trust):
 
 ```bash
-git clone --depth 1 https://github.com/cjbassi/gotop /tmp/gotop
-/tmp/gotop/scripts/download.sh
+bash <(curl -LSfs https://japaric.github.io/trust/install.sh) \
+  -f --git cjbassi/trash-man
 ```
 
-Then move `gotop` into your `$PATH` somewhere.
+You can change the download destination by passing the `--to <location>` flag (useful if Cargo/Rust isn't installed).
 
 ### Arch Linux
 
@@ -101,7 +109,7 @@ snap connect gotop-cjbassi:system-observe
 
 gotop ships with a few colorschemes which can be set with the `-c` flag followed by the name of one. You can find all the colorschemes in the [colorschemes folder](./colorschemes).
 
-To make a custom colorscheme, check out the [template](./colorschemes/template.go) for instructions and then use [default.json](./colorschemes/default.json) as a starter. Then put the file at `~/.config/gotop/<name>.json` and load it with `gotop -c <name>`. Colorschemes PR's are welcome!
+To make a custom colorscheme, copy one of the default ones to `~/.config/gotop/<name>.json` and load it with `gotop -c <name>`. Colorschemes PR's are welcome!
 
 ### CLI Options
 
@@ -114,16 +122,3 @@ To make a custom colorscheme, check out the [template](./colorschemes/template.g
 `-s`, `--statusbar` Show a statusbar with the time.  
 `-b`, `--battery` Show battery level widget (`minimal` turns off). [preview](./assets/screenshots/battery.png)
 `-i`, `--interface=NAME` Select network interface [default: all].
-
-## Built With
-
-- [gizak/termui](https://github.com/gizak/termui)
-  - [nsf/termbox](https://github.com/nsf/termbox-go)
-- [exrook/drawille-go](https://github.com/exrook/drawille-go)
-- [shirou/gopsutil](https://github.com/shirou/gopsutil)
-- [goreleaser/nfpm](https://github.com/goreleaser/nfpm)
-- [distatus/battery](https://github.com/distatus/battery)
-
-## Stargazers over time
-
-[![Stargazers over time](https://starcharts.herokuapp.com/cjbassi/gotop.svg)](https://starcharts.herokuapp.com/cjbassi/gotop)

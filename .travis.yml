@@ -1,34 +1,14 @@
-language: go
+language: rust
 
-go:
-  - 1.11.x
+cache: cargo
 
 git:
   depth: 1
 
-env:
-  global:
-    - NAME=gotop
-
 matrix:
   include:
-    # Linux
-    - env: _GOOS=linux _GOARCH=amd64
+    - env: TARGET=x86_64-unknown-linux-gnu
       os: linux
-    - env: _GOOS=linux _GOARCH=386
-      os: linux
-    - env: _GOOS=linux _GOARCH=arm GOARM=5
-      os: linux
-    - env: _GOOS=linux _GOARCH=arm GOARM=6
-      os: linux
-    - env: _GOOS=linux _GOARCH=arm GOARM=7
-      os: linux
-    - env: _GOOS=linux _GOARCH=arm64
-      os: linux
-
-    # OSX
-    - env: _GOOS=darwin _GOARCH=amd64
-      os: osx
 
 install: true
 script: ./ci/script.sh
@@ -37,7 +17,7 @@ deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
   file_glob: true
-  file: "./dist/*"
+  file: "./*.tar.gz"
   skip_cleanup: true
   on:
     tags: true

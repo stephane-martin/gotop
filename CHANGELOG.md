@@ -22,6 +22,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Process list scroll indicator [#127] [#130]
 - Preliminary OpenBSD support [#112] [#117] [#118]
 
+### Changed
+
+- Change colorscheme definition
+- Rewrite in Rust
+
 ### Fixed
 
 - Fix process localization issues on macOS [#124]
