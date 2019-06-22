@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cjbassi/gotop/src/utils"
+	"github.com/stephane-martin/gotop/src/utils"
 )
 
 func convert(s []string) (MemoryInfo, error) {

@@ -14,12 +14,12 @@ import (
 	"time"
 
 	docopt "github.com/docopt/docopt.go"
-	ui "github.com/gizak/termui/v3"
+	ui "github.com/gizak/termui"
 
-	"github.com/cjbassi/gotop/colorschemes"
-	"github.com/cjbassi/gotop/src/logging"
-	"github.com/cjbassi/gotop/src/utils"
-	w "github.com/cjbassi/gotop/src/widgets"
+	"github.com/stephane-martin/gotop/colorschemes"
+	"github.com/stephane-martin/gotop/src/logging"
+	"github.com/stephane-martin/gotop/src/utils"
+	w "github.com/stephane-martin/gotop/src/widgets"
 )
 
 const (

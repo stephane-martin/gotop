@@ -9,8 +9,8 @@ import (
 
 	psDisk "github.com/shirou/gopsutil/disk"
 
-	ui "github.com/cjbassi/gotop/src/termui"
-	"github.com/cjbassi/gotop/src/utils"
+	ui "github.com/stephane-martin/gotop/src/termui"
+	"github.com/stephane-martin/gotop/src/utils"
 )
 
 type Partition struct {

@@ -4,7 +4,7 @@ import (
 	"image"
 	"log"
 
-	. "github.com/gizak/termui/v3"
+	. "github.com/gizak/termui"
 )
 
 // Sparkline is like: ▅▆▂▂▅▇▂▂▃▆▆▆▅▃. The data points should be non-negative integers.

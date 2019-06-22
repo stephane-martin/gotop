@@ -7,8 +7,8 @@ import (
 
 	psMem "github.com/shirou/gopsutil/mem"
 
-	ui "github.com/cjbassi/gotop/src/termui"
-	"github.com/cjbassi/gotop/src/utils"
+	ui "github.com/stephane-martin/gotop/src/termui"
+	"github.com/stephane-martin/gotop/src/utils"
 )
 
 type MemWidget struct {

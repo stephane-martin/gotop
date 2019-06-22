@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	. "github.com/gizak/termui/v3"
+	. "github.com/gizak/termui"
 )
 
 type Table struct {

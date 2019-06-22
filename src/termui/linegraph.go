@@ -4,8 +4,8 @@ import (
 	"image"
 	"sort"
 
-	drawille "github.com/cjbassi/gotop/src/termui/drawille-go"
-	. "github.com/gizak/termui/v3"
+	. "github.com/gizak/termui"
+	drawille "github.com/stephane-martin/gotop/src/termui/drawille-go"
 )
 
 // LineGraph implements a line graph of data points.

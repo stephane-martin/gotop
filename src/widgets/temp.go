@@ -6,9 +6,9 @@ import (
 	"sort"
 	"time"
 
-	ui "github.com/gizak/termui/v3"
+	ui "github.com/gizak/termui"
 
-	"github.com/cjbassi/gotop/src/utils"
+	"github.com/stephane-martin/gotop/src/utils"
 )
 
 type TempScale int

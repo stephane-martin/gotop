@@ -4,7 +4,7 @@ import (
 	"image"
 	"strings"
 
-	ui "github.com/gizak/termui/v3"
+	ui "github.com/gizak/termui"
 )
 
 const KEYBINDS = `
