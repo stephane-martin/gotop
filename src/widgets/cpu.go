@@ -22,7 +22,7 @@ type CpuWidget struct {
 }
 
 func NewCpuWidget(updateInterval time.Duration, horizontalScale int, showAverageLoad bool, showPerCpuLoad bool) *CpuWidget {
-	cpuCount, err := psCpu.Counts(false)
+	cpuCount, err := psCpu.Counts(true)
 	if err != nil {
 		log.Printf("failed to get CPU count from gopsutil: %v", err)
 	}
